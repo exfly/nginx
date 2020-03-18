@@ -164,6 +164,7 @@ case "$NGX_GCC_VER" in
     *)
         # we have a lot of the unused function arguments
         CFLAGS="$CFLAGS -Wno-unused"
+        CFLAGS="$CFLAGS -Wno-implicit-fallthrough"
     ;;
 esac
 

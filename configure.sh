@@ -6,7 +6,13 @@ set -o pipefail
 
 NGX_WORKSPACE=./buildpath
 
-./auto/configure --prefix="$NGX_WORKSPACE" --without-http_rewrite_module --without-http_gzip_module --without-http-cache --with-debug
+./auto/configure \
+    --prefix="$NGX_WORKSPACE" \
+    --without-http_rewrite_module \
+    --without-http_gzip_module \
+    --without-http-cache \
+    --add-module=models/nginx-hello-world-module \
+    --with-debug
 
 test -d "$NGX_WORKSPACE" || mkdir "$NGX_WORKSPACE"
 test -d "$NGX_WORKSPACE/logs" || mkdir "$NGX_WORKSPACE/logs"

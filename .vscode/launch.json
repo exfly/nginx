@@ -16,6 +16,8 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
+                {"text": "-gdb-set follow-fork-mode child"},
+                {"text": "-gdb-set detach-on-fork off"},
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",

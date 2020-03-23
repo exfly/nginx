@@ -12,7 +12,8 @@ NGX_WORKSPACE=./buildpath
     --without-http_gzip_module \
     --without-http-cache \
     --add-module=models/nginx-hello-world-module \
-    --with-debug
+    --with-debug \
+    --with-cc-opt='-O0 -g'
 
 test -d "$NGX_WORKSPACE" || mkdir "$NGX_WORKSPACE"
 test -d "$NGX_WORKSPACE/logs" || mkdir "$NGX_WORKSPACE/logs"
